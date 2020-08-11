@@ -1128,7 +1128,11 @@
 
 %\usepackage{amssymb}  % must have been included already
 \definecolor{hdarkblue}{rgb}{0,0,0.5}  % dark blue [0,1] channel
-\definecolor{hlightgray}{rgb}{0.9,0.9,0.9}
+% \definecolor{hindigo}{rgb}{0.294,0,0.510}  % #4b0082 
+\definecolor{hdimdimgray}{HTML}{262626}  
+\definecolor{hindigo}{HTML}{4B0082}  % #4b0082 
+\definecolor{hdarkgray}{rgb}{0.05,0.05,0.05}
+\definecolor{hlightgray}{rgb}{0.95,0.95,0.95}
 \newenvironment{Hproof}{           % beginning the environment
     %\\
     \medskip
@@ -1230,6 +1234,30 @@
 %    }
 
 
+% *----------------------------*
+% | HOVEY'S Hquote ENVIRONMENT |
+% *----------------------------*--------------------------------
+\newenvironment{Hquote}{% Hquote open
+  \def\FrameCommand{% FrameCommand open
+    \hspace{10pt}%
+    {\color{hdimdimgray}\vrule width 1pt}% left-side vertical line
+    {\color{hlightgray}\vrule width 4pt}% effectively a left-side margin
+    \colorbox{hlightgray}%
+  }% FrameCommand close
+  \MakeFramed{\advance\hsize-\width\FrameRestore}%
+  \setlength{\leftskip}{10pt}% indent left side
+  \setlength{\rightskip}{14pt}% indent left side
+  %\noindent\hspace{-4pt}% no first paragraph indent
+  %\noindent% no first paragraph indent
+  %\begin{adjustwidth}{}{7pt}%
+  \vspace{2pt}\vspace{2pt}%
+}% Hquote intermediate close
+{% Hquote intermediate open
+  \vspace{5pt}% bottom margin 
+  %\end{adjustwidth}
+  \endMakeFramed%
+  % \setlength{\leftskip}{0pt}% restore back to original, not needed b/c inside environment
+}% Hquote close
 
 
 % *--------------------------*
