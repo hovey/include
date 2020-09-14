@@ -1234,12 +1234,17 @@
   \stepcounter{Hexpoctr}%
   \medskip
   \noindent 
-  {\colorbox{hlightgray}{\parbox{\linewidth}{
-    {\bf \textcolor{hdimdimgray}{
+  %{\colorbox{hlightgray}{\parbox{\linewidth}{
+  {\parbox{\linewidth}{
+  %%{\parbox{\linewidth}{
+    %{\bf \textcolor{hdimdimgray}{
+    {\bf {
             \sffamily
-	    \hfill Example \theHexpoctr \hfill}} }}} 
+	    %\hfill Example \theHexpoctr \hfill}} }}}
+	    Example \theHexpoctr \hfill}} }}
 	    \\ 
-	    \textcolor{hdimdimgray}{\sffamily\noindent#1 $\square$} % \\ \centering $\square$
+	    %\textcolor{hdimdimgray}{\sffamily\noindent#1 $\square$} % \\ \centering $\square$
+	    {\sffamily\noindent#1 $\square$} % \\ \centering $\square$
 }{
   \medskip
 }
